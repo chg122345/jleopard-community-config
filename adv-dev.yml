@@ -1,0 +1,26 @@
+server:
+  port: 8081
+eureka:
+  instance:
+    instance-id: user-auth-8881-hystrix
+    prefer-ip-address: true
+info:
+  app.name: user-auth
+  company: www.jleopard.org
+#  build.artifactId: $project.artifactId$
+#  build.version: $project.version$
+management:
+  server:
+    servlet:
+      context-path: /
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+thymeleaf:
+  cache: false
+  encoding: UTF-8
+  prefix: classpath:/templates/
+  suffix: .html
+  mode: HTML
+  check-template-location: false
