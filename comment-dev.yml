@@ -1,0 +1,30 @@
+server:
+  port: 8083
+eureka:
+  instance:
+    instance-id: comment-8083
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka8001.com:8001/eureka/,http://eureka8002.com:8002/eureka/
+info:
+  app.name: postService
+  company: www.jleopard.org
+#  build.artifactId: $project.artifactId$
+#  build.version: $project.version$
+management:
+  server:
+    servlet:
+      context-path: /
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+thymeleaf:
+  cache: false
+  encoding: UTF-8
+  prefix: classpath:/templates/
+  suffix: .html
+  mode: HTML
+  check-template-location: false
